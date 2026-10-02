@@ -23,6 +23,8 @@ ports_description:
 # itself lets in only Home Assistant administrators.
 ingress: true
 ingress_port: 8099
+# The admin page lives under /admin on the Ingress port too.
+ingress_entry: admin
 panel_icon: mdi:door
 panel_title: doorkey
 panel_admin: true
