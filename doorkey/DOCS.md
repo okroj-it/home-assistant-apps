@@ -34,9 +34,10 @@ other users is not relied on.
    - Optionally a notify service, your home networks, and admin users.
 3. **Start** the app and open **doorkey** in the sidebar.
 
-MQTT is picked up automatically when the Mosquitto broker app is installed:
-doorkey then shows up as a "Door Keypad" device: locked out, failed
-attempts today, and the last entry.
+MQTT is picked up automatically when the Mosquitto broker app is installed
+and its MQTT integration is set up (Settings → Devices & services offers it
+once the broker runs). doorkey then shows up as a "Door Keypad" device:
+locked out, failed attempts today, and the last entry.
 
 ## Tags
 
