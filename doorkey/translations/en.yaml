@@ -1,0 +1,40 @@
+configuration:
+  origin:
+    name: Public address
+    description: >-
+      The https:// address guests open, scheme and host only
+      (e.g. https://door.example.com). Passkeys are bound to it.
+  lock_entity:
+    name: Lock
+    description: The lock entity the keypad opens, e.g. lock.front_door.
+  notify_service:
+    name: Notify service
+    description: >-
+      Optional. A notify service for door events, without "notify.",
+      e.g. mobile_app_pixel.
+  tap_mode:
+    name: Tap mode
+    description: >-
+      sun: NTAG 424 DNA tags with signed taps (needs both tag keys).
+      static: a fixed secret link on any NFC tag (needs the static path).
+  static_path:
+    name: Static path
+    description: For tap mode static, the secret part of the link written to the tags.
+  tag_kek:
+    name: Tag key-encryption key
+    description: For tap mode sun. 64 hex characters; wraps the tags' keys in the database.
+  tag_meta_key:
+    name: Tag meta key (K2)
+    description: For tap mode sun. 32 hex characters, shared by all tags.
+  home_cidrs:
+    name: Home networks
+    description: >-
+      Networks (CIDR) counted as "at home", for codes and actions limited
+      to home, e.g. 203.0.113.7/32 for your public IP.
+  admin_users:
+    name: Admin users
+    description: >-
+      Only needed if doorkey cannot read Home Assistant's users: the
+      Home Assistant usernames allowed into the admin page.
+network:
+  8080/tcp: Keypad and tap pages (put HTTPS in front)
