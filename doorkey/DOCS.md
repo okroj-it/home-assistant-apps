@@ -61,7 +61,7 @@ app without it invalidates all codes. Keep your backups.
 the **Advanced SSH & Web Terminal** app with protection mode off:
 
 ```sh
-docker exec addon_local_doorkey doorkey help
+docker exec app_<repository>_doorkey doorkey help
 ```
 
-(The container name depends on the repository; `docker ps` shows it.)
+(`docker ps` shows the exact container name.)
